@@ -31,7 +31,7 @@ Shoes.app(:width => 700, :height => 700, :title => 'Pinky') do
       @cursor_column += 1 unless @cursor_column == COLUMNS.size
     when ' '
       @pinky.move(COLUMNS[@cursor_column-1]-5,ROWS[@cursor_row-1]-5)
-      remote_pinky.move(COLUMNS[@cursor_column-1]-5,ROWS[@cursor_row-1]-5)
+      remote_pinky.move_to(COLUMNS[@cursor_column-1]-5,ROWS[@cursor_row-1]-5)
     end
     @cursor.move(COLUMNS[@cursor_column-1],ROWS[@cursor_row-1])
   end

@@ -31,7 +31,7 @@ Shoes.app(:width => 700, :height => 700, :title => 'Clyde') do
       @cursor_column += 1 unless @cursor_column == COLUMNS.size
     when ' '
       @clyde.move(COLUMNS[@cursor_column-1]-5,ROWS[@cursor_row-1]-5)
-      remote_clyde.move(COLUMNS[@cursor_column-1]-5,ROWS[@cursor_row-1]-5)
+      remote_clyde.move_to(COLUMNS[@cursor_column-1]-5,ROWS[@cursor_row-1]-5)
     end
     @cursor.move(COLUMNS[@cursor_column-1],ROWS[@cursor_row-1])
   end
